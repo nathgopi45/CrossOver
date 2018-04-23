@@ -37,9 +37,7 @@ public class Comment implements Serializable {
 
   @JsonIgnore
   @ManyToOne
-  /*@ManyToOne(mappedBy="article",targetEntity=Article.class,
-	       fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-  */@JoinColumn(name = "article_id", referencedColumnName = "id")
+  @JoinColumn(name = "article_id", referencedColumnName = "id")
   Article article;
 
   @Size(max = 32768)
